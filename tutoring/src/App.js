@@ -9,6 +9,7 @@ import HwHelpHome from './pages/HwHelpHome'
 import HwHelpPage from './pages/HwHelpPage'
 import ExtraResourcesHome from './pages/ExResourcesHome'
 import ExtraResourcesPage from './pages/ExResourcesPage'
+import SideBarNav from './constants/sidebarNav'
 
 class App extends Component{
   constructor(props){
@@ -22,18 +23,21 @@ class App extends Component{
       <React.Fragment>
         <Router>
           <Switch>
-              <Route path='/' render={() => <Home />} />
-              <Route path='/lessonHome' render={() => <LessonPlanHome />} />
-              <Route path='/lessonPage' render={() => <LessonPlanPage  />} />
-              <Route path='/hwHelpHome' render={() => <HwHelpHome  />} />
-              <Route path='/hwHelpPage' render={() => <HwHelpPage  />} />
-              <Route path='/exResourcesHome' render={() => <ExtraResourcesHome  />} />
-              <Route path='/exResourcesPage' render={() => <ExtraResourcesPage  />} />
+              <SideBarNav>
+                <Route path='/' render={() => <Home />} exact />
+                <Route path='/lessons' render={() => <LessonPlanHome />} exact/>
+                <Route path='/lessons/page' render={() => <LessonPlanPage  />} exact/>
+                <Route path='/hwHelp' render={() => <HwHelpHome  />} exact/>
+                <Route path='/hwHelp/page' render={() => <HwHelpPage  />} exact/>
+                <Route path='/exResources' render={() => <ExtraResourcesHome  />} exact/>
+                <Route path='/exResources/page' render={() => <ExtraResourcesPage  />} exact/>
+              </SideBarNav>
           </Switch>
         </Router>
       </React.Fragment>
       // comment out the entire section above and uncomment the below component itself to try and work on one page and not have to deal with routing
       // <Home />  
+      
     );
   }
 }
