@@ -28,8 +28,7 @@ const useStyles = makeStyles(theme => ({
       easing: theme.transitions.easing.sharp,
       duration: theme.transitions.duration.leavingScreen,
     }),
-    
-    backgroundColor: "#0B3953"
+    backgroundColor: "#41A5D5"
   },
   appBarShift: {
     marginLeft: drawerWidth,
@@ -79,7 +78,7 @@ const useStyles = makeStyles(theme => ({
   },
   toolbarHeader: {
     flexGrow: 1,
-    color:"#F26472",
+    color:"white",
     textAlign: 'center', 
     
   },
