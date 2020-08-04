@@ -16,24 +16,25 @@ class App extends Component{
     this.state={
 
     }}
-  
+
   render() {
     return (
       <React.Fragment>
         <Router>
           <Switch>
-              <Route path='/' render={() => <Home />} />
-              <Route path='/lessonHome' render={() => <LessonPlanHome />} />
-              <Route path='/lessonPage' render={() => <LessonPlanPage  />} />
-              <Route path='/hwHelpHome' render={() => <HwHelpHome  />} />
-              <Route path='/hwHelpPage' render={() => <HwHelpPage  />} />
-              <Route path='/exResourcesHome' render={() => <ExtraResourcesHome  />} />
-              <Route path='/exResourcesPage' render={() => <ExtraResourcesPage  />} />
+            <Route path='/lessonHome' render={() => <LessonPlanHome />} />
+            <Route path='/lessonPage' render={() => <LessonPlanPage  />} />
+            <Route path='/hwHelpHome' render={() => <HwHelpHome  />} />
+            <Route path='/hwHelpPage' render={() => <HwHelpPage  />} />
+            <Route path='/exResourcesHome' render={() => <ExtraResourcesHome  />} />
+            <Route path='/exResourcesPage' render={() => <ExtraResourcesPage  />} />
+            //need to add the path for / at the last . otherwise this will override the other paths
+            <Route path='/' render={() => <Home />} />
           </Switch>
         </Router>
       </React.Fragment>
       // comment out the entire section above and uncomment the below component itself to try and work on one page and not have to deal with routing
-      // <Home />  
+      // <Home />
     );
   }
 }
