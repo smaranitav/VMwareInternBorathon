@@ -1,7 +1,5 @@
 import React, { Component } from 'react';
-import logo from '../logo.svg';
-import '../App.css';
-
+import styles from './css/home.module.css'
 
 class Home extends Component {
     constructor(props){
@@ -19,7 +17,6 @@ class Home extends Component {
         return (
             <div className="App">
             <header className="App-header">
-                <img src={logo} className="App-logo" alt="logo" />
                 <p>
                 This is the home page
                 </p>
