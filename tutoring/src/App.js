@@ -7,6 +7,7 @@ import LessonPlanHome from './pages/LessonHome'
 import LessonPlanPage from './pages/LessonPage'
 import HwHelpHome from './pages/HwHelpHome'
 import HwHelpPage from './pages/HwHelpPage'
+import HwDetailed from './pages/HwDetailed'
 import ExtraResourcesHome from './pages/ExResourcesHome'
 import ExtraResourcesPage from './pages/ExResourcesPage'
 
@@ -24,6 +25,7 @@ class App extends Component{
           <Switch>
             <Route path='/lessonHome' render={() => <LessonPlanHome />} />
             <Route path='/lessonPage' render={() => <LessonPlanPage  />} />
+            <Route path='/expanded/:articleId' component ={ HwDetailed } />
             <Route path='/hwHelpHome' render={() => <HwHelpHome  />} />
             <Route path='/hwHelpPage' render={() => <HwHelpPage  />} />
             <Route path='/exResourcesHome' render={() => <ExtraResourcesHome  />} />
