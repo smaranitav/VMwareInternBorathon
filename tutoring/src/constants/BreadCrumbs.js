@@ -30,9 +30,7 @@ function ListItemLink(props) {
     <li>
       <ListItem button component={Link} to={to} {...other} >
         <ListItemIcon>
-        {/* <ReactSVG src={HomeRoundedIcon} beforeInjection={svg => {
-                        svg.setAttribute('style', 'width: 35px' )
-                    }}/> */}
+        <img source={HomeRoundedIcon} />
         </ListItemIcon>
         <ListItemText primary={primary} />
         {open != null ? open ? <ExpandLess /> : <ExpandMore /> : null}

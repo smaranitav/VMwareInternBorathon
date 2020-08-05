@@ -101,19 +101,19 @@ export default function MiniDrawer(props) {
   function handleDrawerClose() {
     setOpen(false);
   }
-  const drawer = (
-    <div className={classes.menuList}>
-        <div className={classes.toolbar} />
-        <List >
-            <ListItem component={Link} to='/'> Dashboard </ListItem>
-            <ListItem component={Link} to='/'> Profile </ListItem>
-            <ListItem component={Link} to='/'> My Uploads </ListItem>
-            <ListItem component={Link} to='/'> My Questions </ListItem>
-            <ListItem component={Link} to='/'> Following </ListItem>
-            <ListItem component={Link} to='/'> Calendar </ListItem>
-        </List>
-    </div>
-  );
+//   const drawer = (
+//     <div className={classes.menuList}>
+//         <div className={classes.toolbar} />
+//         <List >
+//             <ListItem component={Link} to='/'> Dashboard </ListItem>
+//             <ListItem component={Link} to='/'> Profile </ListItem>
+//             <ListItem component={Link} to='/'> My Uploads </ListItem>
+//             <ListItem component={Link} to='/'> My Questions </ListItem>
+//             <ListItem component={Link} to='/'> Following </ListItem>
+//             <ListItem component={Link} to='/'> Calendar </ListItem>
+//         </List>
+//     </div>
+//   );
 
   return (
     <div className={classes.root}>
