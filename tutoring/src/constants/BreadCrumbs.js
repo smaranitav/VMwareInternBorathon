@@ -16,6 +16,7 @@ import UploadsIcon from '../constants/images/uploads.svg'
 import QuestionsIcon from '../constants/images/help.svg'
 import WatchlistIcon from '../constants/images/watchlist.svg'
 import CalendarIcon from '../constants/images/calendar.svg'
+import StudentsIcon from '../constants/images/student.svg'
 
 const breadcrumbNameMap = {
     '/': 'Dashboard',
@@ -24,6 +25,9 @@ const breadcrumbNameMap = {
     '/myQuestions': 'My Questions',
     '/following': 'Watchlist',
     '/calendar': 'Calendar',
+    '/myStudents': 'My Students',
+    '/myStudents/James': 'James',
+    '/myStudents/Sarah': 'Sarah',
 };
 
 function ListItemLink(props) {
@@ -64,7 +68,8 @@ const styles = theme => ({
 
 class RouterBreadcrumbs extends React.Component {
   state = {
-    open: false
+    open: false,
+    students: ['James', 'Sarah']
   };
 
   handleClick = () => {
@@ -81,14 +86,26 @@ class RouterBreadcrumbs extends React.Component {
               <ListItemLink to="/" iconValue={HomeIcon} />
               <ListItemLink
                 to="/profile"
-                // open={this.state.open}
-                // onClick={this.handleClick}
                 iconValue={ProfileIcon}
               />
               <ListItemLink to="/myUploads" iconValue={UploadsIcon}/>
               <ListItemLink to="/myQuestions" iconValue={QuestionsIcon}/>
               <ListItemLink to="/following" iconValue={WatchlistIcon}/>
               <ListItemLink to="/calendar" iconValue={CalendarIcon}/>
+              <ListItemLink to='/myStudents'
+                open={this.state.open}
+                onClick={this.handleClick}
+                iconValue={StudentsIcon} 
+              />
+              <Collapse
+                component="li"
+                in={this.state.open}
+                timeout="auto"
+                unmountOnExit
+              >
+                <ListItemLink to='/myStudents/James' /> 
+                <ListItemLink to='/myStudents/Sarah' /> 
+              </Collapse>
             </List>
           </nav>
         </div>
