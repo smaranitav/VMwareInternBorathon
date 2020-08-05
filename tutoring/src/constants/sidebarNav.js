@@ -70,21 +70,29 @@ const useStyles = makeStyles(theme => ({
   },
   toolbar: {
     display: 'flex',
-    alignItems: 'center',
-    justifyContent: 'flex-end',
-    padding: '0 8px',
+    // textAlign: 'center',
+    // justifyContent: 'center',
+    // padding: '0 8px',
     ...theme.mixins.toolbar,
     
   },
   toolbarHeader: {
-    flexGrow: 1,
+    flex: 1,
+    // flex: .23,
+    // marginLeft: '32%',
     color:"white",
     textAlign: 'center', 
-    
+    jusitfySelf: 'center',
+    marginRight: '4%',
+  },
+  toolbarHeaderSmaller: {
+    alignSelf: 'flex-end',
+    marginBottom: '18px',
+    fontSize: '10px'
   },
   content: {
     flexGrow: 1,
-    padding: theme.spacing(3),
+    // padding: theme.spacing(3),
   },
 }));
 
@@ -137,8 +145,11 @@ export default function MiniDrawer(props) {
             <MenuIcon />
           </IconButton>
           <Typography variant="h6" className={classes.toolbarHeader} noWrap>
-            We Need To Make a Name
+            Student Planner
           </Typography>
+          {/* <Typography className={classes.toolbarHeaderSmaller} noWrap>
+            Powered By VMWare
+          </Typography> */}
         </Toolbar>
       </AppBar>
       <Drawer
