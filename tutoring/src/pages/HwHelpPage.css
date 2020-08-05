@@ -1,12 +1,12 @@
 .HwHelpPage {
   text-align: center;
-  background-color: rgb(206, 213, 223);
   min-height: 100vh;
   display: flex;
   flex-direction: column;
-  align-items: center;
-  justify-content: center;
+  /* align-items: center;
+  justify-content: center; */
   font-size: calc(10px + 2vmin);
+  /* background-image: url("https://image.shutterstock.com/image-photo/high-angle-view-video-conference-260nw-1676998303.jpg"); */
 }
 
 .Card {
@@ -14,8 +14,29 @@
   padding: 32px;
   width: 50%;
   display: flex;
-  align-items: flex-start;
-  justify-content: flex-start;
+  align-items: center;
+  margin: auto;
   box-shadow: 0 15px 30px 0 rgba(0, 0, 0, 0.11), 0 5px 15px 0 rgba(0, 0, 0, 0.08);
   box-sizing: border-box;
+}
+
+.FormLayout {
+  margin: auto;
+  width: 50%;
+  background-color: rgba(0, 0, 0, 0.08);
+  box-shadow: 0 15px 30px 0 rgba(0, 0, 0, 0.11), 0 5px 15px 0 rgba(0, 0, 0, 0.08);
+  box-sizing: border-box;
+}
+
+.FormData{
+  margin: 20px;
+}
+.FormInput{
+  padding: 20px;
+  margin: 30px;
+  width:80%;
+}
+.MultiSelect{
+  margin-left: 10px;
+  width:50%;
 }

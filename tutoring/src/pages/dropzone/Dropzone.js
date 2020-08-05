@@ -71,19 +71,19 @@ class Dropzone extends Component {
         onClick={this.openFileDialog}
         style={{ cursor: this.props.disabled ? 'default' : 'pointer' }}
       >
-        <input
-          ref={this.fileInputRef}
-          className="FileInput"
-          type="file"
-          multiple
-          onChange={this.onFilesAdded}
-        />
-        <img
-          alt="upload"
-          className="Icon"
-          src="cloud_upload.svg"
-        />
-        <span>Upload Files</span>
+          <input
+            ref={this.fileInputRef}
+            className="FileInput"
+            type="file"
+            multiple
+            onChange={this.onFilesAdded}
+          />
+          <img
+            alt="upload"
+            className="Icon"
+            src="cloud_upload.svg"
+          />
+          <span>Upload Files</span>
       </div>
     )
   }

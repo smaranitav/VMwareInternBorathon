@@ -2,6 +2,9 @@ import React, { Component } from 'react'
 import './Upload.css'
 import Dropzone from '../dropzone/Dropzone'
 import Progress from '../progress/Progress'
+import Container from 'react-bootstrap/Container'
+import Row from 'react-bootstrap/Row'
+import Col from 'react-bootstrap/Col'
 
 class Upload extends Component {
   constructor(props) {
@@ -10,13 +13,15 @@ class Upload extends Component {
         files: [],
         uploading: false,
         uploadProgress: {},
-        successfullUploaded: false
+        successfullUploaded: false,
+        visibility: true
       };
 
       this.onFilesAdded = this.onFilesAdded.bind(this);
       this.uploadFiles = this.uploadFiles.bind(this);
       this.sendRequest = this.sendRequest.bind(this);
       this.renderActions = this.renderActions.bind(this);
+      this.closePopup = this.closePopup.bind(this);
   }
   async uploadFiles() {
     this.setState({ uploadProgress: {}, uploading: true });
@@ -118,32 +123,51 @@ class Upload extends Component {
       }
   }
 
+  closePopup(){
+    this.setState({visibility: false})
+    this.props.parentCallback(false)
+  }
+
   render() {
     return (
-      <div className="Upload">
-        <span className="Title">Upload Files</span>
-        <div className="Content">
-          <div>
-            <Dropzone
-              onFilesAdded={this.onFilesAdded}
-              disabled={this.state.uploading || this.state.successfullUploaded}
-            />
+        <>
+        {
+          this.state.visibility &&
+          <div className="Upload">
+            <div className ="Header">
+              <div className="Title">Upload Files</div>
+              <div className = "CloseButton">
+                <img alt="closePopup"
+                  className="CloseButton"
+                  src="close_button.svg"
+                  onClick={this.closePopup}
+                />
+              </div>
+            </div>
+            <div className="Content">
+              <div>
+                <Dropzone
+                  onFilesAdded={this.onFilesAdded}
+                  disabled={this.state.uploading || this.state.successfullUploaded}
+                />
+              </div>
+              <div className="Files">
+                {this.state.files.map(file => {
+                  return (
+                    <div key={file.name} className="Row">
+                      <span className="Filename">{file.name}</span>
+                      {this.renderProgress(file)}
+                    </div>
+                  );
+                })}
+              </div>
+            </div>
+             <div className="Actions">
+                {this.renderActions()}
+              </div>
           </div>
-          <div className="Files">
-            {this.state.files.map(file => {
-              return (
-                <div key={file.name} className="Row">
-                  <span className="Filename">{file.name}</span>
-                  {this.renderProgress(file)}
-                </div>
-              );
-            })}
-          </div>
-        </div>
-        <div className="Actions">
-          {this.renderActions()}
-        </div>
-      </div>
+      }
+    </>
     );
   }
 }
