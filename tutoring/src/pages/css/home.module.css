@@ -1,0 +1,157 @@
+@font-face{
+    font-family: 'ProximaNova';
+    src: url("./Proxima\ Nova\ Regular.otf")
+}
+.container{
+    margin: 0;
+    min-height: 89.5vh;
+    display: flex;
+    flex-direction: column;
+    font-family: ProximaNova;
+    background-color: #1A252C;
+    /* color: white; */
+}
+.header{
+    min-height: 5vh;
+    /* background-color: yellow; */
+    display: flex;
+    /* align-content: center; */
+    justify-content: center;
+    margin-top: 0.5vh;
+}
+.searchBar{
+    width: 30vw;
+    height: 4vh;
+    /* margin-top: 2vh; */
+    /* color: #A2B0BA; */
+    /* border-radius: 2px; */
+    background-color: #1A252C;
+    border-style: solid;
+    border-top: none;
+    border-left: none;
+    border-right: none;
+    border-bottom-width: 2px;
+    border-bottom-color: #41A5D5;
+    color: #41A5D5;
+    text-indent: 1vw;
+    margin-top: 0;
+}
+input::placeholder {
+    color: #41A5D5;
+  }
+.qsAndCal{
+    height: 50vh;
+    margin-top: .5vh;
+    /* background-color: white; */
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    /* resize: contain; */
+}
+.recentQuestions{
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    /* background-color: yellow; */
+    height: 7vh;
+    margin-bottom: 0;
+}
+.recentQuestionsExContainer{
+    display: flex;
+    flex-direction: column;
+    background-color: white;
+    border-radius: 10px;
+    max-width: 35vw;
+}
+.recentQuestionsContainer{
+    margin-top: 1vh;
+    /* background-color: yellow; */
+    width: 100%;
+    height: 10vh;
+    text-decoration: none;
+}
+.recentQuestionsTitle{
+    align-self: center;
+    color: black;
+}
+.recentQuestionsExTitle{
+    margin-left: 2vw;
+    margin-top: 0;
+    margin-bottom: 0;
+    color: black;
+}
+.recentQuestionsExDesc{
+    margin-left: 4vw;
+    color: black;
+}
+.Calendar{
+    width: 30vw;
+    resize: contain;
+    background-color: white;
+    justify-content: space-evenly;
+    /* margin-left: 2vw; */
+    /* resize: contain; */
+    /* color: white; */
+    /* border-radius: 10px; */
+}
+.selectContainer{
+    height: 30vh;
+    /* background-color: teal; */
+    margin-top: 1.75vh;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+}
+.selectBox{
+    width: 20vw;
+    height: 30vh;
+    display: flex;
+    flex-direction: column;
+    background-color: none;
+    border-style: solid;
+    border-width: 2px;
+    border-color: #41A5D5;
+    border-radius: 10px;
+    color: #41A5D5;
+    align-items: center;
+    /* justify-content: center; */
+    text-decoration: none;
+    fill: none;
+    /* margin-top: .5vh; */
+}
+.selectBox:hover{
+    background-color: #41A5D5;
+    color: #1A252C;
+    fill: #1A252C;
+    z-index: 1;
+}
+.selectImage{
+    /* margin-top: 4vh; */
+    width: 10vw;
+    height: 10vh;
+    margin-bottom: 0;
+}
+.selectImage:hover{
+    opacity: 0;
+}
+.selectImageHover{
+    opacity: 0;
+}
+.selectImageHover:hover{
+    width: 10vw;
+    height: 10vh;
+    margin-bottom: 0;
+}
+.selectTitle{
+    margin-top: 1vh;
+    justify-self: center;
+    margin-bottom: 0;
+    font-size: 140%;
+}
+.selectText{
+    width: 18vw;
+    height: 5vh;
+    justify-self: center;
+    /* margin-top: 4vh; */
+    
+}
