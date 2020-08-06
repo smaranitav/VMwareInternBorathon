@@ -7,6 +7,7 @@ import {
   FormGroup, Label, Input,
   Button,
 } from 'reactstrap';
+import Row from 'react-bootstrap/Row'
 
 class CommentBox extends Component {
     constructor(props) {
@@ -63,17 +64,17 @@ class HwDetailed extends Component {
   constructor(props) {
       super(props);
       this.state = {
-        articleId: ""
+        articleId: 1
       };
 
   }
   componentDidMount(){
-        const { articleId } = this.props.match.params
-        console.log(this.state.articleId)
-        console.log(this.props.articleId)
-        var article_data = decodeURIComponent(articleId)
-        this.setState({articleId:article_data})
-        console.log(this.state.articleId)
+        // const { articleId } = this.props.match.params
+        // console.log(this.state.articleId)
+        // console.log(this.props.articleId)
+        // var article_data = decodeURIComponent(articleId)
+        // this.setState({articleId:article_data})
+        // console.log(this.state.articleId)
 
   }
 
@@ -81,6 +82,14 @@ class HwDetailed extends Component {
 
     return (
       <>
+        <Row className="cardRow">
+          <Col xs={12} sm= {12} md={12} lg={12} xl={12} className="cardTitle">
+              What is x*x?
+          </Col>
+          <Col xs={12} sm= {12} md={12} lg={12} xl={12}>
+              <img src = "https://lh3.googleusercontent.com/proxy/Qx-T_RalEqPN_bSA9oQI4rIZnJ7ex9VxSgkbmZRK6onw6nUIB5LpmXe973oOBgU2ZnteHo4tWSPB7eCheDI-SPEmAN_PPukVw_j_EGTK3aWHfA"/>
+          </Col>
+        </Row>
         <CommentBox articleNumber={this.state.articleId} />
 
       </>

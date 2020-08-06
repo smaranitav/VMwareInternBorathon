@@ -1,0 +1,82 @@
+.cardRow{
+    margin-bottom: 20px;
+    margin-left: 30px;
+    margin-right: 30px;
+    box-shadow: 0px 5px 5px #c5c5c5;
+    border:1px solid #dadada;
+    border-radius: 10px;
+    padding: 20px;
+    font-size: 15px;
+    background-color: white;
+
+}
+.cardLink{
+    text-decoration: none;
+    color: black;
+}
+.backgroundDiv{
+  background-color: #1A252C;
+  padding: 20px;
+}
+.bg{
+  background-color: #1A252C;
+}
+.cardTitle{
+    font-weight: bold;
+    font-style: italic;
+    font-size: 18px;
+}
+.cardSection{
+    /*width:15%;*/
+    float:right;
+    margin-top: 12px;
+  }
+.cardDate{
+    font-style:italic;
+    margin-top: 12px;
+    margin-left: 1px;
+    /*width:85%;*/
+    float: left;
+}
+.maths{
+  background-color: #ff3300;
+    color:black;
+    padding-top:3px;
+    padding-bottom:3px;
+    padding-left:4px;
+    padding-right:4px;
+    border-radius: 3px;
+    font-size: 14px;
+    font-weight: 600;
+}
+.science{
+  background-color: #d9d9d9;
+    color:black;
+    padding-top:3px;
+    padding-bottom:3px;
+    padding-left:4px;
+    padding-right:4px;
+    border-radius: 3px;
+    font-size: 14px;
+    font-weight: 600;
+}
+.history{
+  background-color:#009973;
+    color:white;
+    padding-top:3px;
+    padding-bottom:3px;
+    padding-left:4px;
+    padding-right:4px;
+    border-radius: 3px;
+    font-size: 14px;
+    font-weight: 600;
+}
+.cardOther{
+  margin-bottom: 20px;
+}
+.pagetitle{
+  margin-left: 10px;
+  text-align: center;
+  color: white;
+  font-size: 20px;
+}

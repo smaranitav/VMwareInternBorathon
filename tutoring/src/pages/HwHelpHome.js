@@ -12,6 +12,31 @@ import HwDetailed from './HwDetailed'
 import Row from 'react-bootstrap/Row'
 import Col from 'react-bootstrap/Col'
 
+function setSectionBg(index){
+    if (index < 1)
+      {
+        return (<span className="maths">Mathematics</span>)
+      }
+    else if (index == 2)
+      {
+        return (<span className="science">Science</span>)
+      }
+    else
+      {
+        return (<span className="history">History</span>)
+      }
+}
+
+function setDate(index){
+  if (index<1){
+    return <span className="date">Posted by Jess on 08-05-2020</span>
+  }
+  else{
+    return <span className="date">Posted by Diego on 08-04-2020</span>
+  }
+}
+
+
 class HwHelpHome extends Component {
   constructor(props) {
       super(props);
@@ -43,13 +68,14 @@ class HwHelpHome extends Component {
   render() {
 
     return (
-      <>
+      <div className = "bg">
       <RouteSwitch>
         <Route path="/expanded/:articleId"
                             component={HwDetailed} />
       </RouteSwitch>
 
-      <div> My Questions
+      <div className = "backgroundDiv">
+        <span className = "pagetitle"> My Questions </span>
         {
           !this.state.articlesPresent && this.state.all &&
           <div> No questions posted by you yet! </div>
@@ -64,11 +90,19 @@ class HwHelpHome extends Component {
                 className="cardLink">
 
                 <Row className="cardRow">
-                  <Col xs={12} sm= {12} md={12} lg={12} xl={12}>
+                  <Col xs={12} sm= {12} md={12} lg={12} xl={12} className="cardTitle">
                       {article.question}
                   </Col>
-                  <Col xs={12} sm= {12} md={12} lg={12} xl={12}>
-                    Posted by Smaranita Vasudev
+
+                  <Col xs={8} sm= {8} md={8} lg={8} xl={8} className="cardOther">
+                      <div className="cardDate">
+                      {setDate(index)}
+                      </div>
+
+                      <div className="cardSection" align="right">
+                                    {setSectionBg(index)}
+                      </div>
+
                   </Col>
                 </Row>
                 </Link>
@@ -78,7 +112,7 @@ class HwHelpHome extends Component {
           </div>
         }
       </div>
-      </>
+      </div>
     )
   }
 }
