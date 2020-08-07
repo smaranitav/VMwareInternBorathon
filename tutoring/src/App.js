@@ -7,6 +7,7 @@ import LessonPlanHome from './pages/LessonHome'
 import LessonPlanPage from './pages/LessonPage'
 import HwHelpHome from './pages/HwHelpHome'
 import HwHelpPage from './pages/HwHelpPage'
+import HwDetailed from './pages/HwDetailed'
 import ExtraResourcesHome from './pages/ExResourcesHome'
 import ExtraResourcesPage from './pages/ExResourcesPage'
 import SideBarNav from './constants/sidebarNav'
@@ -29,6 +30,7 @@ class App extends Component{
                 <Route path='/lessons/page' render={() => <LessonPlanPage  />} exact/>
                 <Route path='/hwHelp' render={() => <HwHelpHome  />} exact/>
                 <Route path='/hwHelp/page' render={() => <HwHelpPage  />} exact/>
+                <Route path='/expanded/:articleId' render={() => <HwDetailed  />} exact/>
                 <Route path='/exResources' render={() => <ExtraResourcesHome  />} exact/>
                 <Route path='/exResources/page' render={() => <ExtraResourcesPage  />} exact/>
               </SideBarNav>
