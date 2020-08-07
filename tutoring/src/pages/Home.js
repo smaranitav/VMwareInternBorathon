@@ -44,27 +44,27 @@ class Home extends Component {
                                 <h3 className={styles.recentQuestionsTitle}>Recent Questions</h3>
                             </div>
                             <Link className={styles.recentQuestionsContainer}>
-                                <h4 className={styles.recentQuestionsExTitle}>This is the title of some question</h4>
+                                <h4 className={styles.recentQuestionsExTitle}>Question 1 Title</h4>
                                 <p className={styles.recentQuestionsExDesc}>How do you teach a kid pythagorean theorem?</p>
                             </Link>
                             <Link className={styles.recentQuestionsContainer}>
-                                <h4 className={styles.recentQuestionsExTitle}>This is the title of some question</h4>
+                                <h4 className={styles.recentQuestionsExTitle}>Question 2 Title</h4>
                                 <p className={styles.recentQuestionsExDesc}>How do you teach a kid pythagorean theorem?</p>
                             </Link>
                             <Link className={styles.recentQuestionsContainer}>
-                                <h4 className={styles.recentQuestionsExTitle}>This is the title of some question</h4>
+                                <h4 className={styles.recentQuestionsExTitle}>Question 3 Title</h4>
                                 <p className={styles.recentQuestionsExDesc}>How do you teach a kid pythagorean theorem?</p>
                             </Link>
                             <Link className={styles.recentQuestionsContainer}>
-                                <h4 className={styles.recentQuestionsExTitle}>This is the title of some question</h4>
+                                <h4 className={styles.recentQuestionsExTitle}>Question 4 Title</h4>
                                 <p className={styles.recentQuestionsExDesc}>How do you teach a kid pythagorean theorem?</p>
                             </Link>
                             <Link className={styles.recentQuestionsContainer}>
-                                <h4 className={styles.recentQuestionsExTitle}>This is the title of some question</h4>
+                                <h4 className={styles.recentQuestionsExTitle}>Question 5 Title</h4>
                                 <p className={styles.recentQuestionsExDesc}>How do you teach a kid pythagorean theorem?</p>
                             </Link>
                             <Link className={styles.recentQuestionsContainer}>
-                                <h4 className={styles.recentQuestionsExTitle}>This is the title of some question</h4>
+                                <h4 className={styles.recentQuestionsExTitle}>Question 6 Title</h4>
                                 <p className={styles.recentQuestionsExDesc}>How do you teach a kid pythagorean theorem?</p>
                             </Link>
                         </Scrollbar>

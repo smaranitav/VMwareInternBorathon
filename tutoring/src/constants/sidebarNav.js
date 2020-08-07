@@ -146,7 +146,7 @@ export default function MiniDrawer(props) {
             <MenuIcon />
           </IconButton>
           <Typography variant="h6" className={classes.toolbarHeader} noWrap>
-            Student Planner
+            vmEDUCATE
           </Typography>
           {/* <Typography className={classes.toolbarHeaderSmaller} noWrap>
             Powered By VMWare
